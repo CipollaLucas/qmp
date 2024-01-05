@@ -1,0 +1,402 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- Custom styles for this template -->
+<title>{% block titulo %}Home{% endblock titulo %}</title>
+
+
+
+{% block body_index %}
+      <!-- header section start -->
+      <div class="header_section">
+         <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <div class="logo"><a href="{% url 'index' %}"><img src="{% static 'blog/images/logo.png' %}" style="height: 60px; width: 250px;"></a></div>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="posteos.html">Posteos</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#about"> De que se trata </a>
+                     </li>
+                     <li>
+                        <a class="nav-link" href="#terapias"> Terapias </a>
+                     </li>
+                     
+                     <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                     </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                     <h1 class="text" style="color: black;">No estás sol@</h1>
+                  </form>
+                  <div class="search_icon">
+                     <ul>
+                        <li><a href="#"><img src="{% static 'blog/images/search-icon.png' %}"></a></li>
+                        <li><a href="#">LOGIN</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </nav>
+         </div>
+      </div>
+      <!-- header section end -->
+   {% block contenido %} {% endblock contenido %}
+      <!-- banner section start -->
+      <div class="banner_section layout_padding">
+         <div class="container">
+            <div id="costum_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <h1 class="furniture_text">Que me pasa</h1>
+                     <p class="there_text">Un lugar dónde importa que te esté pasando.</p>
+                     <p class="there_text"> Probablemente, ya le pasó a alguien más y acá podés encontrar el camino a la solución.</p>
+                     <p class="there_text"><b>No estás sol@</b></p>
+                     <div class="contact_bt_main">
+                        <div class="contact_bt"><a href="{}">Sumate</a></div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <h1 class="furniture_text">FURNITURE</h1>
+                     <p class="there_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some fo</p>
+                     <div class="contact_bt_main">
+                        <div class="contact_bt"><a href="contact.html">Contact Us</a></div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <h1 class="furniture_text">FURNITURE</h1>
+                     <p class="there_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some fo</p>
+                     <div class="contact_bt_main">
+                        <div class="contact_bt"><a href="contact.html">Sumate</a></div>
+                     </div>
+                  </div>
+               </div>
+               <!-- <a class="carousel-control-prev" href="#costum_slider" role="button" data-slide="prev">
+               <i class=""><img src="{% static 'blog/images/left-arrow.png' %}"></i>
+               </a>
+               <a class="carousel-control-next" href="#costum_slider" role="button" data-slide="next">
+               <i class=""><img src="{% static 'blog/images/right-arrow.png' %}"></i>
+               </a> -->
+            </div>
+         </div>
+      </div>
+      <!-- banner section end -->
+      <!---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+      <!-- posteos section start -->
+      <div class="services_section layout_padding">
+         <div class="container">
+            <h1 class="services_taital">Posteos</h1>
+            <p class="many_taital">Acá vas a encontrar los últimos posteos </p>
+            <div class="services_section2 layout_padding">
+               <div class="row">
+                  <div class="col-lg-3 col-sm-6">
+                     {% block posteos %} {%endblock posteos%}
+                     <div class="icon_1"><img src="images/icon-1.png"></div>
+                     <h2 class="furnitures_text">Posteo 1</h2>
+                     <p class="dummy_text">Breve resumen del posteo 1</p>
+                     <div class="read_bt_main">
+                        <div class="read_bt"><a href="#">Leer más</a></div>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="icon_1"><img src="images/icon-2.png"></div>
+                     <h2 class="furnitures_text">Posteo 2</h2>
+                     <p class="dummy_text">Breve resumen del posteo </p>
+                     <div class="read_bt_main">
+                        <div class="read_bt"><a href="#">Leer más</a></div>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="icon_1"><img src="images/icon-3.png"></div>
+                     <h2 class="furnitures_text">Posteo 3</h2>
+                     <p class="dummy_text">Breve resumen del posteo</p>
+                     <div class="read_bt_main">
+                        <div class="read_bt"><a href="#">Leer más</a></div>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="icon_1"><img src="images/icon-4.png"></div>
+                     <h2 class="furnitures_text">Posteo 4</h2>
+                     <p class="dummy_text">Breve resumen del posteo</p>
+                     <div class="read_bt_main">
+                        <div class="read_bt"><a href="#">Leer más</a></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- posteos section end -->
+            <!---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+      <!-- about section start -->
+      <div class="about_section layout_padding" id="about">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <h1 class="about_text">sobre esta idea</h1>
+                  <p class="lorem_text">Es un foro dónde sólo se habla de salud mental en todas sus formas. PARA TODAS LAS EDADES.
+                     Queremos terminar con la leyenda urbana de que los espacios terapéuticos, son para personas que estan LOCAS. </p>
+                  <p class="lorem_text_2renglon">La psiquis se enferma, como el cuerpo. Como toda enfermedad, presenta síntomas que se pueden idenficar, diagnosticar y tratar.<br>
+                     Solo así comprenderemos como conectar nuestras emociones, con nuestro cerebro y en consecuencia, nuestros actos.</p>
+                  <div class="read_bt1"><a href="{% url 'blog:about' %}">Leer más</a></div>
+               </div>
+               <div class="col-md-6">
+                  <div class="image_1"><img src="{% static 'blog/images/idea.png' %}"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- about section end -->
+            <!---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+      <!-- Terapias section start -->
+      <div class="furnitures_section layout_padding" id="terapias">
+         <div class="container">
+            <h1 class="our_text">Terapias</h1>
+            <p class="ipsum_text">Existen muchas corrientes. Podes ver cuál es la adecuada para vos. </p>
+            <p class="ipsum_text_b">De todas maneras, nunca dejes de buscar la comodidad de tu espacio terapéutico. </p>
+            <div class="furnitures_section2 layout_padding">
+               <div class="row">
+                  <!--------------------Psicoanalisis----------------------------------->
+                  <div class="col-md-6">
+                     <div class="container_main">
+                        <img src="{% static 'blog/images/freud.png' %}" class="image_iguales rounded">
+                        <div class="overlay">
+                           <a href="https://es.wikipedia.org/wiki/Psicoan%C3%A1lisis" class="icon" title="User Profile">
+                           <i class="fa fa-search"></i>
+                           </a>
+                        </div>
+                     </div>
+                     <h3 class="temper_text">Psicoanalisis</h3>
+                     <p class="dololr_text">Es la exploración del inconsciente a través de la asociación libre (expresar durante las sesiones todas los sentimientos y ocurrencias que aparezcan). 
+                        A diferencia de los métodos que se basan en ejercicios, o aprendizaje o de las explicaciones en el plano cognitivo, 
+                        el psicoanálisis se encuentra entre las técnicas de descubrimiento, que intentan que el paciente logre una comprensión profunda de las circunstancias 
+                        (generalmente inconscientes) que han dado origen a sus afecciones, o son la causa de sus sufrimientos o malestares psíquicos. 
+                        El objetivo esencial de la terapia psicoanalítica una comprensión racional acerca de las relaciones causales. 
+                        Se trata más bien de lograr una reestructuración de más amplio alcance de la personalidad, muy especialmente de la vida afectiva y 
+                        particularmente en aquellas áreas que contribuyen y mantienen la formación de síntomas, o de formas defensivas que causan daño o malestar.</p>
+                  </div>
+                  <!-------------------------Fin psicoanalisis---------------------------------------->
+                  <!----------------------------------------------------------------------------->
+                  <!----------------------Cognitivo conductual---------------------------------------->
+                  <div class="col-md-6">
+                     <div class="container_main">
+                        <img src="{% static 'blog/images/cc.jpg' %}" class="image_iguales rounded">
+                        <div class="overlay">
+                           <a href="https://es.wikipedia.org/wiki/Terapias_cognitivo-conductuales" class="icon" title="User Profile">
+                           <i class="fa fa-search"></i>
+                           </a>
+                        </div>
+                     </div>
+                     <h3 class="temper_text">Cognitivo Conductual</h3>
+                     <p class="dololr_text">La terapia cognitivo-conductual se enfoca en el presente y en el futuro. Ayuda a las personas a darse cuenta de que tienen el control sobre sus comportamientos.
+                        Por ejemplo, identificar situaciones problemáticas o trastornos de tu vida. Una afección médica, un divorcio, una pena, un enojo, etc.
+                        Prestar atención a tus pensamientos, emociones y opiniones en relación con estos problemas. Una vez identificado el problema, podrás contarle al terapeuta que pensas sobre ese problema. Es posible que el terapeuta te pida que escribas un diario con tus diálogos internos.
+                        Identificar pensamientos negativos o inexactos. También puede pedirte que prestes atención a tus respuestas físicas, emocionales y conductuales ante diversas situaciones.
+                        También podrás reformular pensamientos negativos o inexactos. Aprenderás a ver si tu opinión se sustenta en hechos o en una percepción inexacta de la realidad.</p>
+                  </div>
+                  <!---------------------Fin cognitivo--------------------------------------->
+                  <!----------------------------------------------------------------------------->
+                  <!---------------------- Holística ------------------------------------------->
+                  <div class="col-md-6">
+                     <div class="container_main">
+                        <img src="{% static 'blog/images/holistica.jpg' %}" class="image_iguales rounded">
+                        <div class="overlay">
+                           <a href="https://ieeducacion.com/terapia-holistica/" class="icon" title="User Profile">
+                           <i class="fa fa-search"></i>
+                           </a>
+                        </div>
+                     </div>
+                     <h3 class="temper_text">Holístico</h3>
+                     <p class="dololr_text">La medicina holística no tiene base científica, es del tipo alternativa, 
+                        que se basa en los poderes de sanación naturales del organismo, 
+                        las formas en que los tejidos interaccionan y la influencia del medio ambiente.<br> 
+                        El enfoque pretende tratar al paciente y no a su enfermedad.
+                        Podemos encontar varios tipos de tratamiento como: <b>Homeopatía, Acupuntura, Aromaterapia, Flores de bach, entre otros.</b>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                     </p>
+                     
+                  </div>
+                  <!---------------------Fin holistica--------------------------------------->
+                  <!----------------------------------------------------------------------------->
+                  <!---------------------Humanista-------------------------------------------->
+                  <div class="col-md-6">
+                     <div class="container_main">
+                        <img src="{% static 'blog/images/humanista.png' %}" class="image_iguales rounded">
+                        <div class="overlay">
+                           <a href="https://es.wikipedia.org/wiki/Psicolog%C3%ADa_humanista" class="icon" title="User Profile">
+                           <i class="fa fa-search"></i>
+                           </a>
+                        </div>
+                     </div>
+                     <h3 class="temper_text">Humanismo</h3>
+                     <p class="dololr_text">Esta corriente nace cómo reacción al psicoanalisis y el conductismo más ortodoxo.
+                        El psicoanálisis se centraba en los instintos y el conductismo en los mecanismos de acción, reacción y refuerzo.<br> 
+                        EL movimiento humanista, pretende la consideración global de la persona y la acentuación en sus aspectos existenciales 
+                        (la libertad, el conocimiento, la responsabilidad, la historicidad).<br> 
+                        Cuestiona una concepción de la psicología que, desde la vocación de reconocerse como una ciencia natural, 
+                        reducía al ser humano a variables cuantificables (conductismo), o centrada tan solo en aspectos negativos y patológicos del ser humano (psicoanálisis).<br> 
+                     
+                     </p>
+                  </div>
+                  <!---------------------Fin humanista--------------------------------------->
+                  <!----------------------------------------------------------------------------->
+                  <!----------------------Junguiana------------------------------------------>
+                  <div class="col-md-6">
+                     <div class="container_main">
+                        <img src="{% static 'blog/images/jung.webp' %}" class="image_iguales rounded">
+                        <div class="overlay">
+                           <a href="https://es.wikipedia.org/wiki/Psicolog%C3%ADa_anal%C3%ADtica" class="icon" title="User Profile">
+                           <i class="fa fa-search"></i>
+                           </a>
+                        </div>
+                     </div>
+                     <h3 class="temper_text">Junguiana</h3>
+                     <p class="dololr_text">Carl Jung, el padre de la psicología analítica era mucho más que ese psiquiatra y analista suizo que llevó a otro nivel muchos de esos conceptos heredados de Sigmund Freud. 
+                         fue un alquimista de la ciencia, de la antropología, la astrología, el arte, la religión y el mundo de los sueños<br>
+                         s el arte de una psicología profunda, donde gracias a una relación dialéctica y cercana entre el analista y el paciente, 
+                         se logra unir las partes conscientes con las inconscientes para dar forma a un Yo más genuino y a un auténtico equilibrio emocional. </p>
+                  </div>
+                  <!---------------------Fin junguiana--------------------------------------->
+                  <!----------------------------------------------------------------------------->
+                  <!---------------------Mindfulness------------------------------------------->
+                  <div class="col-md-6">
+                     <div class="container_main">
+                        <img src="{% static 'blog/images/mindfulnes.png' %}" class="image_iguales rounded">
+                        <div class="overlay">
+                           <a href="https://es.wikipedia.org/wiki/Mindfulness" class="icon" title="User Profile">
+                           <i class="fa fa-search"></i>
+                           </a>
+                        </div>
+                     </div>
+                     <h3 class="temper_text">Mindfulness</h3>
+                     <p class="dololr_text">Mindfulness o Atención Plena significa prestar atención de manera conciente a 
+                        la experiencia del momento presente con interés, curiosidad y aceptación. Jon Kabat-Zinn, 
+                        conocido referente mundial de Mindfulness por haber introducido esta práctica dentro del modelo médico de 
+                        occidente hace más de 30 años, fundó la Clínica de Reducción de Estrés en el Centro Médico de la Universidad de Massachusetts<br> 
+                        Allí introdujo a los pacientes a la práctica de Mindfulness para el tratamiento de problemas físicos, y psicológicos, dolor crónico, y 
+                        otros síntomas asociados al estrés. </p>
+                  </div>
+                  <!---------------------Fin mind--------------------------------------->
+                  <!----------------------------------------------------------------------------->
+                  <!---------------------Sistemica----------------------------------------------->
+                  <div class="col-md-6">
+                     <div class="container_main">
+                        <img src="{% static 'blog/images/sistemica.jpg' %}" class="image_iguales rounded">
+                        <div class="overlay">
+                           <a href="https://es.wikipedia.org/wiki/Terapia_sist%C3%A9mica" class="icon" title="User Profile">
+                           <i class="fa fa-search"></i>
+                           </a>
+                        </div>
+                     </div>
+                     <h3 class="temper_text">Sistémica</h3>
+                     <p class="dololr_text">es un enfoque  global e integral, con un pensamiento circular y no lineal, 
+                        cuyo objeto de estudio y campo de intervención son los sistemas  familiares  y  sus subsistemas : 
+                        Pareja, Fratría, e  Individual y otros grupos de pertenencia significativos.<br>
+                        Se aplica para el tratamiento de disfunciones, trastornos y enfermedades concebidas 
+                        como expresión de las alteraciones en las interacciones, estilos relacionales y patrones de comunicación humano, 
+                        que está basada en la Teoría General de Sistemas enunciada por Ludwig von Bertalanffy.</p>
+                  </div>
+                  <!---------------------Fin sistemica--------------------------------------->
+                  <!----------------------------------------------------------------------------->
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- terapias section end -->
+      <!---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+      {% endblock body_index %}
+      {% block footer %}
+      <!-- footer section start -->
+      <div class="footer_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-3 col-sm-6">
+                  <div class="fooer_logo"><img src="images/footer-logo.png"></div>
+                  <p class="footer_lorem_text">There are many variat
+                     ions of passages of L
+                     orem Ipsum available
+                     , but the majority h
+                     ave suffered altera
+                     tion in some form, by 
+                  </p>
+               </div>
+               <div class="col-lg-3 col-sm-6">
+                  <h1 class="customer_text">LET US HELP YOU</h1>
+                  <p class="footer_lorem_text">There are many variat
+                     ions of passages of L
+                     orem Ipsum available
+                     , but the majority h
+                     ave suffered altera
+                     tion in some form, by 
+                  </p>
+               </div>
+               <div class="col-lg-3 col-sm-6">
+                  <h1 class="customer_text">INFORMATION</h1>
+                  <p class="footer_lorem_text1">About Us<br>
+                     Careers<br>
+                     Sell on shopee<br>
+                     Press & News<br>
+                     Competitions<br>
+                     Terms & Conditions
+                  </p>
+               </div>
+               <div class="col-lg-3 col-sm-6">
+                  <h1 class="customer_text">OUR Design</h1>
+                  <p class="footer_lorem_text">There are many variat
+                     ions of passages of L
+                     orem Ipsum available
+                     , but the majority h
+                     ave suffered altera
+                     tion in some form, by 
+                  </p>
+               </div>
+            </div>
+            <div class="input-group mb-3">
+               <input type="text" class="form-control" placeholder="Enter your email" aria-label="Enter your email" aria-describedby="basic-addon2">
+               <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon2"><a href="#">Subscribe</a></span>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--  footer section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section">
+      <div class="container">
+         <div class="social_icon">
+            <ul>
+               <li><a href="https://www.facebook.com/cipollalucas/"><img src="{% static 'blog/images/fb-icon.png' %}"></a></li>
+               <li><a href="https://www.instagram.com/cipollalucas_/"><img src="{% static 'blog/images/instagram-icon.png' %}"></a></li>
+               <li><a href="https://www.linkedin.com/in/lucascipolla/"><img src="{% static 'blog/images/linkedin-icon.png' %}"></a></li>
+            </ul>
+         </div>
+         <p class="copyright_text">2023 Todos los derechos reservados. Desarrollado por Lucas Cipolla.</p>
+      </div>
+      <!-- copyright section end -->
+      {% endblock footer %}
+      
+      {% block extrajs %}
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+      {% endblock extrajs %}    
+   </body>
