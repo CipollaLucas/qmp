@@ -1,0 +1,78 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+<!-- Custom styles for this template -->
+<title>{% block titulo %}Home{% endblock titulo %}</title>
+
+
+
+{% block body_home %}
+      <!--########################################################################################-->
+      <!-- banner section start -->
+      {% block banner %}
+      <div class="banner_section layout_padding">
+         <div class="container">
+            <div id="costum_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <h1 class="furniture_text"> Que me pasa</h1>
+                     <p class="there_text">Un lugar dónde importa que te esté pasando.</p>
+                     <p class="there_text"> Probablemente, ya le pasó a alguien más y acá podés encontrar el camino a la solución.</p>
+                     <p class="there_text"><b>No estás sol@</b></p>
+                     <div class="contact_bt_main">
+                        <div class="contact_bt"><a href="{}">Sumate</a></div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <h1 class="furniture_text">FURNITURE</h1>
+                     <p class="there_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some fo</p>
+                     <div class="contact_bt_main">
+                        <div class="contact_bt"><a href="contact.html">Contact Us</a></div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <h1 class="furniture_text">FURNITURE</h1>
+                     <p class="there_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some fo</p>
+                     <div class="contact_bt_main">
+                        <div class="contact_bt"><a href="contact.html">Sumate</a></div>
+                     </div>
+                  </div>
+               </div>
+               <!-- <a class="carousel-control-prev" href="#costum_slider" role="button" data-slide="prev">
+               <i class=""><img src="{% static 'blog/images/left-arrow.png' %}"></i>
+               </a>
+               <a class="carousel-control-next" href="#costum_slider" role="button" data-slide="next">
+               <i class=""><img src="{% static 'blog/images/right-arrow.png' %}"></i>
+               </a> -->
+            </div>
+         </div>
+      </div>
+      {% endblock banner %}
+      <!-- banner section end -->
+      <!--###########################################################################################-->
+      <!-- Block breve historia -->
+      {% block breve_historia %}
+      <div class="about_section layout_padding" id="about">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <h1 class="about_text">sobre esta idea</h1>
+                  <p class="lorem_text">Es un foro dónde sólo se habla de salud mental en todas sus formas. PARA TODAS LAS EDADES.
+                     Queremos terminar con la leyenda urbana de que los espacios terapéuticos, son para personas que estan LOCAS. </p>
+                  <p class="lorem_text_2renglon">La psiquis se enferma, como el cuerpo. Como toda enfermedad, presenta síntomas que se pueden idenficar, diagnosticar y tratar.<br>
+                     Solo así comprenderemos como conectar nuestras emociones, con nuestro cerebro y en consecuencia, nuestros actos.</p>
+                  <div class="read_bt1"><a href="{% url 'historia' %}">Leer más</a></div>
+               </div>
+               <div class="col-md-6">
+                  <div class="image_1"><img src="{% static 'core/images/idea.png' %}"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      {% endblock breve_historia %}
+      <!-- breve description end -->
+      <!--############################################################################################-->
+      {% endblock body_home %}
+      <!-- bock footer start -->
+   </body>
+

@@ -16,12 +16,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from blog.views import index
-
+from core.views import *
+from django.conf import settings
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', index, name='index'),
-    # Acá traemos las urls de la app BLOG.
-    path('blog/', include(('blog.urls', 'blog'))),
+    
+    # Acá traemos las urls de la app CORE.
+     path('', include('core.urls')),
 
+    # Acá traemos las urls de la app SERVICIOS.
+     path('', include('servicios.urls')),
+
+    #Path del admin
+    path('admin/', admin.site.urls),
 ]
+
+#Si está eñ modo DEBUG activado le pasamos la dirección donde queremos que guarde los archivos media.
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static (settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

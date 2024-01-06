@@ -1,0 +1,79 @@
+{% extends 'core/home.html' %}
+<!-- blog section start -->
+<div class="services_section layout_padding">
+  <div class="container">
+     <h1 class="services_taital">blog</h1>
+     <p class="many_taital">Acá vas a encontrar los últimos blog </p>
+     <div class="services_section2 layout_padding">
+        <div class="row">
+           <div class="col-lg-3 col-sm-6">
+              {% block blog %} {%endblock blog%}
+              <div class="icon_1"><img src="images/icon-1.png"></div>
+              <h2 class="furnitures_text">Posteo 1</h2>
+              <p class="dummy_text">Breve resumen del posteo 1</p>
+              <div class="read_bt_main">
+                 <div class="read_bt"><a href="#">Leer más</a></div>
+              </div>
+           </div>
+           <div class="col-lg-3 col-sm-6">
+              <div class="icon_1"><img src="images/icon-2.png"></div>
+              <h2 class="furnitures_text">Posteo 2</h2>
+              <p class="dummy_text">Breve resumen del posteo </p>
+              <div class="read_bt_main">
+                 <div class="read_bt"><a href="#">Leer más</a></div>
+              </div>
+           </div>
+           <div class="col-lg-3 col-sm-6">
+              <div class="icon_1"><img src="images/icon-3.png"></div>
+              <h2 class="furnitures_text">Posteo 3</h2>
+              <p class="dummy_text">Breve resumen del posteo</p>
+              <div class="read_bt_main">
+                 <div class="read_bt"><a href="#">Leer más</a></div>
+              </div>
+           </div>
+           <div class="col-lg-3 col-sm-6">
+              <div class="icon_1"><img src="images/icon-4.png"></div>
+              <h2 class="furnitures_text">Posteo 4</h2>
+              <p class="dummy_text">Breve resumen del posteo</p>
+              <div class="read_bt_main">
+                 <div class="read_bt"><a href="#">Leer más</a></div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>
+<!-- blog section end -->
+{% block contenido %} 
+{% block posteos %}
+<div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        {% if posts %}
+        {% for post in posts %}
+
+        <div class="post-preview">
+            <h2 class="post-title">
+              {{post.titulo}}
+            </h2>
+            <h3 class="post-subtitle">
+              {{post.contenido}}
+            </h3>
+          <p class="post-meta">Escrito por
+            <strong>{{post.autor_id}}</strong>
+             en {{post.fecha_creacion}}</p>
+        </div>
+        <hr>
+          {% endfor %}
+        {% else %}
+        <h1>No existe ningun post registrado</h1>
+        {% endif%}
+        <!-- Paginador -->
+        <div class="clearfix">
+          <a class="btn btn-primary float-right" href="#">Más post's &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock posteos %}
+{% endblock contenido %} 

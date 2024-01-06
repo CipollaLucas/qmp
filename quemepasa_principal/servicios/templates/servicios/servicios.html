@@ -1,0 +1,20 @@
+{%extends 'core/base.html'%}
+{%load static%}
+
+{% block contenido %} 
+{% block servicios %}
+
+<div class="about_section layout_padding">
+   {% for servicio in servicios %}
+      
+      <div class="col-lg-3 col-sm-6">
+         <div class="col-lg-3 col-sm-6" src="{{servicio.image}}"></div>
+         <h2 class="furnitures_text">{{servicio.titulo}}</h2>
+         <p class="dummy_text">{{servicio.subtitulo}}</p>
+         <p> {{servicio.content}}</p>
+      </div>
+   {% endfor %}
+</div>
+
+{%endblock servicios%}
+{% endblock contenido %} 
