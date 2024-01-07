@@ -47,7 +47,7 @@
                            <li class="nav-item {% if request.path == '/home' %} active {% endif %}">
                               <a class="nav-link" href="{% url 'home' %}">Home</a>
                            </li>
-                           <li class="nav-item{% if request.path == '/blog' %} active {% endif %}">
+                           <li class="nav-item {% if request.path|slice:":6" == '/blog/' %}active{% endif %}">
                               <a class="nav-link" href="{% url 'blog' %}">blog</a>
                            </li>
                            <li class="nav-item {% if request.path == '/historia' %} active {% endif %}">

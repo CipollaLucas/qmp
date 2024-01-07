@@ -11,6 +11,6 @@ urlpatterns = [
     #path('servicios/', servicios, name='servicios'),
     path('store/', store, name='store'),
     path('contacto/', contacto, name='contacto'),
-    path('blog/', blog, name='blog'),
+    #path('blog/', blog, name='blog'),
     path('sample/', sample, name='sample'),
 ]

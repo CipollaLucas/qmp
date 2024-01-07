@@ -1,9 +1,10 @@
 from django.urls import path
-from blog.views import index, About
+from blog.views import *
 
-# Creamos la variables para mezclar las views con las templates.
+# Creamos la variables para fusionar las views con las templates.
 
 urlpatterns = [
     # path("", index, name="index"),
-    path("about", About, name="about"),
+    path('', blog, name="blog"),
+    path('categoria/<int:categoria_id>/', categoria, name="categoria"),
 ]

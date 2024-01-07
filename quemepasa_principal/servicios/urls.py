@@ -4,7 +4,7 @@ from servicios.views import *
 
 
 urlpatterns = [
-    # Acá traemos las urls de la app CORE.
-    path('servicios/', servicios, name='servicios'),
+    # Acá traemos las urls de la app SERVICIOS.
+    path('', servicios, name='servicios'),
 
 ]

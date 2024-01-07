@@ -1,0 +1,31 @@
+{% extends 'core/home.html' %}
+{% block contenido %} 
+{% block posteos %}
+<div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        {% for post in categoria.get_posts.all %} <!-- Acá va a buscar en sentido inverso, por post la categoria, y todo lo que haya -->
+
+        <div class="post-preview">
+            <h2 class="post-title">
+              {{post.titulo}}
+            </h2>
+            <h3 class="post-subtitle">
+              {{post.contenido|linebreaks}}
+            </h3>
+          <p class="post-meta">Escrito por
+            <strong>{{post.autor}} | </strong> <em>{% for categoria in post.categorias.all  %} <a href= "{% url 'categoria' categoria.id  %}" class="link"> {{categoria.nombre}}</a> {% if not forloop.last%}, {% endif %} {% endfor%} </em>
+             - {{post.publicado|date:"SHORT_DATE_FORMAT"}}</p>
+        </div>
+        <hr>
+          {% endfor %}
+        <h1>No existe ningun post registrado</h1>
+        <!-- Paginador -->
+        <div class="clearfix">
+          <a class="btn btn-primary float-right" href="#">Más post's &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock posteos %}
+{% endblock contenido %} 

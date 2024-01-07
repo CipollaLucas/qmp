@@ -24,7 +24,10 @@ urlpatterns = [
      path('', include('core.urls')),
 
     # Acá traemos las urls de la app SERVICIOS.
-     path('', include('servicios.urls')),
+     path('servicios/', include('servicios.urls')),
+
+     # Acá traemos las urls de la app BLOG.
+     path('blog/', include('blog.urls')),
 
     #Path del admin
     path('admin/', admin.site.urls),
