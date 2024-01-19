@@ -150,14 +150,25 @@
       <!-- copyright section start -->
       <div class="copyright_section">
       <div class="container">
+         
          <div class="social_icon">
             <ul>
-               <li><a href="https://www.facebook.com/cipollalucas/"><img src="{% static 'core/images/fb-icon.png' %}"></a></li>
-               <li><a href="https://www.instagram.com/cipollalucas_/"><img src="{% static 'core/images/instagram-icon.png' %}"></a></li>
-               <li><a href="https://www.linkedin.com/in/lucascipolla/"><img src="{% static 'core/images/linkedin-icon.png' %}"></a></li>
+               {% if LINK_FACEBOOK %}<li><a href="{{LINK_FACEBOOK}}"><img src="{% static 'core/images/fb-icon.png' %}"></a></li> {% endif %}
+               {% if LINK_INSTAGRAM%}<li><a href="{{LINK_INSTAGRAM}}"><img src="{% static 'core/images/instagram-icon.png' %}"></a></li> {% endif %}
+               {% if LINK_LINKEDIN %}<li><a href="{{LINK_LINKEDIN}}"> <img src="{% static 'core/images/linkedin-icon.png' %}"></a></li> {% endif %}
             </ul>
          </div>
-         <p class="copyright_text">2023 Todos los derechos reservados. Desarrollado por Lucas Cipolla.</p>
+         <p class="m-0 mbt">
+            <!-- {% if politica_privacidad%} {% endif %}
+            {% if aviso_legal %}<a href="{% url 'sample' %}" class="link">Aviso legal</a> {% endif %}
+            {% if cookies %}<a href="{% url 'sample'  %}" class="link">Cookies</a> {% endif %}
+          </p> -->
+          {% load pages_extras %}
+          {% get_page_list as page_list %}
+          {% for page in page_list %}
+          <a href="{% url 'page' page.id page.url|slugify %}" class="link">{{page.title}}</a> {% if not forloop.last %}·{% endif %} 
+        {% endfor %}
+         <p class="copyright_text">2023 | Todos los derechos reservados. Desarrollado por Lucas Cipolla.</p>
       </div>
       <!-- copyright section end -->
       {% endblock footer %}

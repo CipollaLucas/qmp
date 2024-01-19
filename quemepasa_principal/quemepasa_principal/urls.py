@@ -21,13 +21,19 @@ from django.conf import settings
 urlpatterns = [
     
     # Acá traemos las urls de la app CORE.
-     path('', include('core.urls')),
+    path('', include('core.urls')),
 
     # Acá traemos las urls de la app SERVICIOS.
-     path('servicios/', include('servicios.urls')),
+    path('servicios/', include('servicios.urls')),
 
-     # Acá traemos las urls de la app BLOG.
-     path('blog/', include('blog.urls')),
+    # Acá traemos las urls de la app BLOG.
+    path('blog/', include('blog.urls')),
+
+    # Acá traemos las urls de la app PAGES.
+    path('page/', include('pages.urls')),
+
+    # Acá traemos las urls de la app CONTACTO.
+    path('contacto/', include('contacto.urls')),
 
     #Path del admin
     path('admin/', admin.site.urls),

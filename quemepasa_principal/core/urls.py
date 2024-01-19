@@ -10,7 +10,7 @@ urlpatterns = [
     path('terapias/', terapias, name='terapias'),
     #path('servicios/', servicios, name='servicios'),
     path('store/', store, name='store'),
-    path('contacto/', contacto, name='contacto'),
+    #path('contacto/', contacto, name='contacto'),
     #path('blog/', blog, name='blog'),
-    path('sample/', sample, name='sample'),
+    #path('sample/', sample, name='sample'),
 ]
