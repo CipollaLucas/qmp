@@ -5,11 +5,11 @@ from core.views import *
 
 urlpatterns = [
     # Acá traemos las urls de la app CORE.
-    path('', home, name='home'),
-    path('historia/', historia, name='historia'),
-    path('terapias/', terapias, name='terapias'),
+    path('', HomePageView.as_view(), name='home'),
+    path('historia/', HistoriaPageView.as_view(), name='historia'),
+    path('terapias/', TerapiasPageView.as_view(), name='terapias'),
     #path('servicios/', servicios, name='servicios'),
-    path('store/', store, name='store'),
+    path('profesionales/', ProfesionalesPageView.as_view(), name='profesionales'),
     #path('contacto/', contacto, name='contacto'),
     #path('blog/', blog, name='blog'),
     #path('sample/', sample, name='sample'),

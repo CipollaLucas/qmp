@@ -62,7 +62,7 @@
                            </li>
                            
                            <li class="nav-item">
-                              <a class="nav-link" href="{% url 'store' %}">Store</a>
+                              <a class="nav-link" href="{% url 'profesionales' %}">Cartilla</a>
                            </li>
                            
                            <li class="nav-item">
@@ -98,7 +98,7 @@
          <div class="container">
             <div class="row">
                <div class="col-lg-3 col-sm-6">
-                  <div class="fooer_logo"><img src="core/static/core/images/footer-logo.png"></div>
+                  <!--<div class="fooer_logo"><img src="../images/footer-logo.png"></div>-->
                   <p class="footer_lorem_text">There are many variat
                      ions of passages of L
                      orem Ipsum available
@@ -158,11 +158,7 @@
                {% if LINK_LINKEDIN %}<li><a href="{{LINK_LINKEDIN}}"> <img src="{% static 'core/images/linkedin-icon.png' %}"></a></li> {% endif %}
             </ul>
          </div>
-         <p class="m-0 mbt">
-            <!-- {% if politica_privacidad%} {% endif %}
-            {% if aviso_legal %}<a href="{% url 'sample' %}" class="link">Aviso legal</a> {% endif %}
-            {% if cookies %}<a href="{% url 'sample'  %}" class="link">Cookies</a> {% endif %}
-          </p> -->
+         <p class="pages_text">
           {% load pages_extras %}
           {% get_page_list as page_list %}
           {% for page in page_list %}

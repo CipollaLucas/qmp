@@ -1,18 +1,23 @@
 from django.shortcuts import render
-
+from django.views.generic.base import TemplateView
 #Acá vamos a tener las views estáticas
 
+#Vamos a utilizar vistas basadas en clases.
+class HomePageView(TemplateView):
+    template_name = 'core/home.html'
+    def get(self, request, *args, **kargs):
+        return render(request, self.template_name)
 
-def home(request):
+class HistoriaPageView(TemplateView):
+    template_name = 'core/historia.html'
+    def get(self, request, *args, **kwargs):
+        return render(request, self.template_name )
 
-    # Render recibe tres parametros (peticion request, template y contexto a renderizar.)
-    return render(request, 'core/home.html')
+class ProfesionalesPageView(TemplateView):
+    template_name = 'core/profesionales.html'
+    def get(self, request, *args, **kwargs):
+        return render(request, self.template_name )
 
-def historia(request):
-    return render(request, 'core/historia.html')
-
-def store(request):
-    return render(request, 'core/store.html')
-
-def terapias(request):
-    return render (request, "core/terapias.html")
+class TerapiasPageView(TemplateView):
+    def get(self, request, *args, **kwargs):
+        return render(request, self.template_name )
