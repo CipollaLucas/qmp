@@ -19,5 +19,6 @@ class ProfesionalesPageView(TemplateView):
         return render(request, self.template_name )
 
 class TerapiasPageView(TemplateView):
+    template_name='core/terapias.html'
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name )

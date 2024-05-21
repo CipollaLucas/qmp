@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 from core.views import *
 from django.conf import settings
+
+
 urlpatterns = [
     
     # Acá traemos las urls de la app CORE.
@@ -37,6 +39,11 @@ urlpatterns = [
 
     #Path del admin
     path('admin/', admin.site.urls),
+    
+    # Path de Auth - Incluímos esto, debido a Django nos proveerá urls para el manejo de la autenticación.
+    # Automaticamente se nos crearán urls para el manejo todal de las cuentas. Docu --> https://ccbv.co.uk/
+    path('accounts/', include ('django.contrib.auth.urls')),
+    path('accounts/', include ('registration.urls')),
 ]
 
 #Si está eñ modo DEBUG activado le pasamos la dirección donde queremos que guarde los archivos media.

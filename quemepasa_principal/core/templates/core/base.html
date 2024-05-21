@@ -74,8 +74,14 @@
                         </form>
                         <div class="search_icon">
                            <ul>
-                              <li><a href="#"><img src="{% static 'core/images/search-icon.png' %}"></a></li>
-                              <li><a href="#">LOGIN</a></li>
+                              <!-- <li><a href="#"><img src="{% static 'core/images/search-icon.png' %}"></a></li> -->
+                              {%if not request.user.is_authenticated %}
+                              <li><a href="{% url 'login' %}">Acceder</a></li>
+                              {% else %}
+                              <li><a href=" {% url 'profile' %}">Perfil </a></li>
+                              <!-- <li><a href="#">Bienvenido {{user.username}}</a></li> -->
+                              <li><a href=" {% url 'logout' %}">Salir</a></li>
+                              {% endif %}
                            </ul>
                         </div>
                      </div>
@@ -158,12 +164,14 @@
                {% if LINK_LINKEDIN %}<li><a href="{{LINK_LINKEDIN}}"> <img src="{% static 'core/images/linkedin-icon.png' %}"></a></li> {% endif %}
             </ul>
          </div>
+         <div>
          <p class="pages_text">
           {% load pages_extras %}
           {% get_page_list as page_list %}
           {% for page in page_list %}
           <a href="{% url 'page' page.id page.url|slugify %}" class="link">{{page.title}}</a> {% if not forloop.last %}·{% endif %} 
         {% endfor %}
+         </div>
          <p class="copyright_text">2023 | Todos los derechos reservados. Desarrollado por Lucas Cipolla.</p>
       </div>
       <!-- copyright section end -->
