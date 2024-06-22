@@ -1048,7 +1048,15 @@ textarea#comment::placeholder {
 	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
-
+.banner_section_profile {
+    width: 100%;
+    float: left;
+    background-image: url(../images/banner-bg.png);
+    height: auto;
+    padding-bottom: 50px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
 
 
 

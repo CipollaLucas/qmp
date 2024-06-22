@@ -7,8 +7,8 @@
 
 <div class="about_section layout_padding">
    <div class="container">
-      <div class="row">
-         <div class="col-md-6">
+      {% comment %} <div class="row"> {% endcomment %}
+         {% comment %} <div class="col-md-6"> {% endcomment %}
             <h1 class="about_text">¿Porque la palabra terapia es relacionada con locura?</h1>
             <p class="lorem_text">Hablar con amigos para contarles tus problemas, realizar algún deporte, ir de vacaciones, escapar un finde, entre otras cosas.
                Podemos decir que son espacios de reflexivos, de ocio, o terapéuticos.
@@ -62,11 +62,11 @@
                   <br><b style="color: black;" >La terapia es lo mejor que podes hacer por vos. No importa cuál, ni con quién.</b><br> 
                   <p class="lorem_text_2renglon">Me nombre es Lucas y esto es <b>totalmente GRATIS y ATP.</b><br> </p>
             <div class="read_bt1"><a href="#">¿Querés contar algo?</a></div>
-         </div>
-         <div class="col-md-6">
+         {% comment %} </div> {% endcomment %}
+         {% comment %} <div class="col-md-6">
             <div class="image_1"><img src="{%static 'core/images/cambio.jpg'%}"></div>
-         </div>
-      </div>
+         </div> {% endcomment %}
+      {% comment %} </div> {% endcomment %}
    </div>
 </div>
 

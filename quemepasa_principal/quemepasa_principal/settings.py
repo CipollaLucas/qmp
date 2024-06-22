@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'servicios.apps.ServiciosConfig',   # * SERVICIOS
     'social.apps.SocialConfig', # * SOCIAL
     'contacto.apps.ContactoConfig', # * CONTACTO
+    'profiles.apps.ProfilesConfig', # * PROFILES
+    'messenger.apps.MessengerConfig', # * MESSENGER
 
     
 ]

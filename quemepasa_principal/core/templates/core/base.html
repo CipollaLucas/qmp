@@ -79,7 +79,11 @@
                               <li><a href="{% url 'login' %}">Acceder</a></li>
                               {% else %}
                               <li><a href=" {% url 'profile' %}">Perfil </a></li>
+                              <li><a href=" {% url 'messenger:list' %}">Mensajes </a></li>
                               <!-- <li><a href="#">Bienvenido {{user.username}}</a></li> -->
+                              {%if request.user.is_staff %}
+                              <!-- <li><a class="nav-link" href="{% url 'profiles:list' %}">Perfiles</a></li>-->
+                              {% endif %}
                               <li><a href=" {% url 'logout' %}">Salir</a></li>
                               {% endif %}
                            </ul>

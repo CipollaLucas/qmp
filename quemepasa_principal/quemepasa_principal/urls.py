@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 from core.views import *
 from django.conf import settings
+from profiles.urls import profiles_patterns
+from messenger.urls import messenger_patterns
 
 
 urlpatterns = [
@@ -44,6 +46,12 @@ urlpatterns = [
     # Automaticamente se nos crearán urls para el manejo todal de las cuentas. Docu --> https://ccbv.co.uk/
     path('accounts/', include ('django.contrib.auth.urls')),
     path('accounts/', include ('registration.urls')),
+
+    #Path de Profiles
+    path('profiles/', include (profiles_patterns)),
+
+    #Path de messenger
+    path('messenger/', include(messenger_patterns))
 ]
 
 #Si está eñ modo DEBUG activado le pasamos la dirección donde queremos que guarde los archivos media.
