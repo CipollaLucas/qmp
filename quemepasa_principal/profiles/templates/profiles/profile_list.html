@@ -19,13 +19,8 @@
                     <img src="{% static 'registration/img/no-avatar.jpg' %}" class="img-fluid profile-avatar">
                   {% endif %}
                   <p class="profile-data">
-                    {% if profile.user.last_name %}
-                    <b>{{profile.user.first_name |truncatechars:"16"}} {{profile.user.last_name |truncatechars:"16"}}</b><br>
+                    <b>{{profile.user|truncatechars:"16"}}</b><br>
                     <a href="{% url 'profiles:detail' profile.user %}">Ver perfil</a>
-                    {% else %}
-                    <b>{{profile.user |truncatechars:"16"}}</b><br>
-                    <a href="{% url 'profiles:detail' profile.user %}">Ver perfil</a>
-                    {% endif %}
                   </p>
                 </div>
               </div>
